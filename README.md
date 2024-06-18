@@ -1,4 +1,4 @@
-# aioshutdown
+# aiostd
 
 A simple library for asynchronous communication with standard I/O
 
