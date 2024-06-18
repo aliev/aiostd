@@ -1,11 +1,11 @@
 import asyncio
 import os
-from typing import IO
+from typing import IO, Optional
 
 
 async def open_io_stream_reader(
     reader: IO,
-    loop: asyncio.AbstractEventLoop | None = None,
+    loop: Optional[asyncio.AbstractEventLoop] = None,
 ) -> asyncio.StreamReader:
     """
     Asynchronously opens a stream reader for the given IO object.
@@ -34,7 +34,7 @@ async def open_io_stream_reader(
 
 async def open_io_stream_writer(
     writer: IO,
-    loop: asyncio.AbstractEventLoop | None = None,
+    loop: Optional[asyncio.AbstractEventLoop] = None,
 ) -> asyncio.StreamWriter:
     """
     Asynchronously opens a stream writer for the given IO object.
@@ -66,7 +66,7 @@ async def open_io_stream_writer(
 async def open_io_stream(
     reader: IO,
     writer: IO,
-    loop: asyncio.AbstractEventLoop | None = None,
+    loop: Optional[asyncio.AbstractEventLoop] = None,
 ) -> tuple[asyncio.StreamReader, asyncio.StreamWriter]:
     """
     Asynchronously opens both stream reader and writer for the given IO objects.
