@@ -1,6 +1,6 @@
 import asyncio
 import os
-from typing import IO, Optional
+from typing import IO, Optional, Tuple
 
 
 async def open_io_stream_reader(
@@ -67,7 +67,7 @@ async def open_io_stream(
     reader: IO,
     writer: IO,
     loop: Optional[asyncio.AbstractEventLoop] = None,
-) -> tuple[asyncio.StreamReader, asyncio.StreamWriter]:
+) -> Tuple[asyncio.StreamReader, asyncio.StreamWriter]:
     """
     Asynchronously opens both stream reader and writer for the given IO objects.
 
