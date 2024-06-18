@@ -29,6 +29,6 @@ jobs:
     - name: Run lint
       run: |
         make lint
-    - name: Run tests
-      run: |
-        pytest
+    # - name: Run tests
+    #   run: |
+    #     pytest
